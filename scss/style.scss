@@ -1,0 +1,92 @@
+/*!
+ *  Copyright (c) 2020 Ranjith Suranga. All rights reserved.
+ *  Licensed under the MIT License. See License file in the project root for license information.
+ */
+
+/**
+ * @author : Ranjith Suranga <suranga@ijse.lk>
+ * @since : 11/24/20
+**/
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+}
+
+h1{
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  font-size: 8vw;
+  margin: 0 10px;
+  border-radius: 10px;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+  background-color: lightgray;
+  opacity: 0.8;
+  font-family: 'Patua One', cursive;
+}
+
+.particle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  //transition: transform 500ms;
+}
+
+.circle{
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: lightgray;
+  border-radius: 100%;
+  opacity: 0.5;
+  animation: pointer 800ms infinite;
+  z-index:1000;
+}
+
+.caret{
+  position: absolute;
+  display: inline-block;
+  margin: 5px;
+  width: 20px;
+  top: 0;
+  bottom: 0;
+  animation-name: caret-visibility;
+  animation-iteration-count: infinite;
+  animation-duration: 500ms;
+}
+
+@keyframes caret-visibility {
+  0%{
+    opacity: 1;
+  }
+
+  20%{
+    background-color: black;
+    opacity: 1;
+  }
+}
+
+@keyframes pointer {
+  0%{
+    box-shadow: 0 0 0px 0px red;
+  }
+
+  50%{
+    box-shadow: 0 0 0px 20px rgba(0,0,255,0.5);
+  }
+
+  100%{
+    box-shadow: 0 0 0px 70px rgba(255,0,0,0.5);
+  }
+}

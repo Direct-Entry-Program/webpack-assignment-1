@@ -1,0 +1,7 @@
+{
+  "name": "webpack-assignment-1",
+  "version": "1.0.0",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}
